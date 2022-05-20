@@ -12,8 +12,12 @@ body{
 /* Layout */
 .Container{
     margin: 0 auto;
-    background-color: aqua;
 }
+.Flex{
+    display: flex;
+    justify-content: space-between; /* vai colocar os conteúdos deixa um epaço no meio, nesse caso a logo vai ficar em um canto, espaço e o menu no outro canto */
+}
+
 /* topo do site */
 #topo{
     position: fixed;
@@ -26,15 +30,49 @@ body{
 
 /* Smartphone Portrait ********************************************************** */
 
-
+/* Cabeçalho */
+header{
+    height: 60px;
+    
+}
+#logo img{
+    width: 128px;
+    border-radius: 50%;
+}
+#check{
+    display: none;
+}
+label{
+    font-size: 3em;
+    padding-right: 15px;
+}
+nav ul{
+    list-style: none;
+    background-color: grey;
+    height: 100vh;    /* 100vh vai pegar total da tela */
+    position: fixed;
+    top: 60px;
+    right: -100%; /*vai fazer o menu sumir da tela  */
+    width: 100%;
+    transition: all 0.5s;
+}
+#check:checked ~ ul{
+    /* ao clicar vai fazer com que o menu apareça fazendo ele voltar */
+    right: 0;
+}
+nav ul li{
+    padding: 20px;
+    border-bottom: 1px solid #a9a9a9 ;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
 
 /* Smartphone Landscape********************************************************** */
 @media (min-width: 576px){
     .Container{
         max-width: 540px;
-    }
-    body{
-        background-color: red;
     }
 }
 
@@ -44,9 +82,6 @@ body{
 @media (min-width: 768px){
     .Container{
         max-width: 720px;
-    }
-    body{
-        background-color: blue;
     }
 }
 
@@ -66,5 +101,33 @@ body{
 @media (min-width: 1200px){
     .Container{
         max-width: 1140px;
+    }
+    header{
+        height: 120px;
+    }
+    #logo img{
+        width: 180px;
+        margin-top: 30px;
+    }
+    label{
+        display: none;
+    }
+    nav ul{
+        position: static;
+        /* basta declarar como static, que vai ignorar as posições indicadas pelo fix no nav ul de cima */
+        height: auto;
+        background-color: transparent;
+        /* transparente é o padrão quando não define nenhuma cor por padrão */
+        margin-top: 50px;
+    }
+    nav ul li{
+        float: left;
+        border: 0;
+    }
+    nav ul li a{
+        color: #343538;
+    }
+    nav ul li a:hover{
+        color: red;
     }
 }
