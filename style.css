@@ -17,6 +17,10 @@ body{
     display: flex;
     justify-content: space-between; /* vai colocar os conteúdos deixa um epaço no meio, nesse caso a logo vai ficar em um canto, espaço e o menu no outro canto */
 }
+.Flex2{
+    display: flex;
+    align-items: center;
+}
 
 /* topo do site */
 #topo{
@@ -93,6 +97,33 @@ main h1 {
 main h2{
     font-size: 1em;
     margin: 20px 0px 50px 0px;
+}
+/* Sobre */
+#sobre{
+    padding: 50px 0px;
+    background: url(img/background.webp);
+    background-size: cover;
+}
+
+#destaqueSobre{
+    display: none;
+    
+}
+.topicosSobre img{
+    width: 80px;
+}
+#textoSobre{
+    color: white;
+    padding: 0px 10px;
+}
+#textoSobre h2 {
+    margin-bottom: 10px;
+}
+.topicosSobre{
+    margin-top: 20px;
+}
+.topicosSobre img{
+    margin-left: 10px;
 }
 
 /* Smartphone Landscape********************************************************** */
