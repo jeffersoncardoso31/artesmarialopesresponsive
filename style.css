@@ -90,6 +90,7 @@ main{
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    background-position: center;
 }
 main h1 {
     font-size: 2.5em;
@@ -103,6 +104,7 @@ main h2{
     padding: 50px 0px;
     background: url(img/background.webp);
     background-size: cover;
+    background-position: center;
 }
 
 #destaqueSobre{
@@ -206,5 +208,17 @@ main h2{
     }
     nav ul li a:hover{
         color: red;
+    }
+    /* Sobre */
+    #sobre{
+        background-attachment: fixed;
+    }
+    #destaqueSobre{
+        display: inline;
+    }
+    #destaqueSobre img{
+        width: 300px;
+        border-radius: 50%;
+        margin-right: 50px;
     }
 }
