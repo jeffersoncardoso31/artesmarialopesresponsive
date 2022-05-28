@@ -21,7 +21,10 @@ body{
     display: flex;
     align-items: center;
 }
-
+.Flex3{
+    display: flex;
+    flex-direction: column;
+}
 /* topo do site */
 #topo{
     position: fixed;
@@ -130,7 +133,22 @@ main h2{
 .topicosSobre img{
     margin-left: 10px;
 }
+/* One page */
+#onepage{
+    padding: 50px 10px;
+}
 
+#onepage h2{
+    margin-bottom: 10px;
+}
+
+#onepage p{
+    margin-bottom: 25px;
+}
+#video iframe{
+    width: 340px;
+    height: 191px;
+}
 /* Smartphone Landscape********************************************************** */
 @media (min-width: 576px){
     .Container{
@@ -140,6 +158,10 @@ main h2{
         main h1, main h2{
         text-shadow: black 0.05em 0.05em 0.05em;
         /* criar uma sombra */
+}
+#video iframe{
+    width: 560px;
+    height: 315px;
 }
 }
 
@@ -223,5 +245,10 @@ main h2{
         width: 300px;
         border-radius: 50%;
         margin-right: 50px;
+    }
+    /* one page */
+    .Flex3{
+        flex-direction: row;
+        align-items: center;
     }
 }
